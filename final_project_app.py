@@ -8,6 +8,7 @@ import time
 ###############
 # Third-Party #
 ###############
+import en_core_web_sm
 from joblib import load
 import numpy as np
 import pandas as pd
@@ -50,7 +51,7 @@ if st.button('Predict'):
             progress_bar = st.progress(0)
 
             # Get the appropriate spaCy model to use.
-            spacy_model = spacy.load('en_core_web_sm', disable = ['parser', 'ner'])
+            spacy_model = en_core_web_sm.load(disable = ['parser', 'ner'])
 
             ################################
             # TEXT PREPROCESSING FUNCTIONS #
