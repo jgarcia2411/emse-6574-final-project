@@ -123,7 +123,7 @@ if st.button('Predict'):
             progress_bar.progress(75)
 
             # Get predictions.
-            cuisine = 'italian'
+            cuisine = 'mexican'
             calories = calories_model.predict([ingredients_processed])[0]
             progress_bar.progress(100)
 
@@ -135,7 +135,7 @@ if st.button('Predict'):
         cuisine_label = 'Southern US'
 
     st.markdown(f'''
-        Hm...we predict these ingredients to have **{calories}** calories and to be
+        Hm...we predict these ingredients to have **{round(calories, 2)}** calories and to be
         **{cuisine_label}** cuisine. Yum!
     ''')
 
