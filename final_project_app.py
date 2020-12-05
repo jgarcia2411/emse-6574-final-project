@@ -125,20 +125,20 @@ if st.button('Predict'):
                 ingredients, 
                 'calories'
             )
-            progress_bar.progress(25)
+            progress_bar.progress(0.25)
 
             # Load cuisine type model.
             time.sleep(3)
-            progress_bar.progress(50)
+            progress_bar.progress(0.50)
 
             # Load calories model.
             calories_model = load('calories_model.joblib')
-            progress_bar.progress(75)
+            progress_bar.progress(0.75)
 
             # Get predictions.
             cuisine = 'mexican'
             calories = calories_model.predict([ingredients_processed_calories])[0]
-            progress_bar.progress(100)
+            progress_bar.progress(1.0)
 
         st.balloons()
 
