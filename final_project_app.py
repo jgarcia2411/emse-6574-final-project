@@ -119,7 +119,7 @@ if st.button('Predict'):
                 ingredients, 
                 'cuisine'
             )
-            progress_bar.progress(12.5)
+            progress_bar.progress(0.125)
 
             ingredients_processed_calories = preprocess_text(
                 ingredients, 
