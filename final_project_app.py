@@ -76,12 +76,16 @@ if st.button('Predict'):
             def _remove_short_words(text):
                 return [token for token in text if len(token) > 2]
 
-            def preprocess_text(text):
+            def preprocess_text(text, model):
                 # Lowercase text and remove extra spaces.
                 step_1_2 = ' '.join(
                     [word.lower() for word in str(text).split()]
                 )
                 
+                if model = 'cuisine':
+                    # Remove numbers
+                    step_1_2 = re.sub('[0-9]', '', step_1_2)
+
                 # Remove units.
                 step_3 = re.sub(
                     '(oz|ounces|ounce|pound|pounds|lb|lbs|inch|inches|kg|cup|cups|tablespoon|teaspoon|tablespoons|teaspoons)', 
@@ -111,7 +115,16 @@ if st.button('Predict'):
                 return ' '.join(step_9)
 
             # Start processing.
-            ingredients_processed = preprocess_text(ingredients)
+            ingredients_processed_cuisine = preprocess_text(
+                ingredients, 
+                'cuisine'
+            )
+            progress_bar.progress(12.5)
+            
+            ingredients_processed_calories = preprocess_text(
+                ingredients, 
+                'calories'
+            )
             progress_bar.progress(25)
 
             # Load cuisine type model.
@@ -124,7 +137,7 @@ if st.button('Predict'):
 
             # Get predictions.
             cuisine = 'mexican'
-            calories = calories_model.predict([ingredients_processed])[0]
+            calories = calories_model.predict([ingredients_processed_calories])[0]
             progress_bar.progress(100)
 
         st.balloons()
