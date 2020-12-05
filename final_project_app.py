@@ -29,7 +29,7 @@ st.sidebar.markdown('''
 
     ## Calories Model
     The way the calories model works is by taking the ingredients, preprocessing
-    them using the Python `spaCy` library, and passing it into a scikit-learn
+    them using the Python `spaCy` library, and passing it into a `scikit-learn`
     pipeline consisting of a term-frequency vectorizer and random forest regressor 
     model.
 
