@@ -82,7 +82,7 @@ if st.button('Predict'):
                     [word.lower() for word in str(text).split()]
                 )
                 
-                if model = 'cuisine':
+                if model == 'cuisine':
                     # Remove numbers
                     step_1_2 = re.sub('[0-9]', '', step_1_2)
 
@@ -120,7 +120,7 @@ if st.button('Predict'):
                 'cuisine'
             )
             progress_bar.progress(12.5)
-            
+
             ingredients_processed_calories = preprocess_text(
                 ingredients, 
                 'calories'
