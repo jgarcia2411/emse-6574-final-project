@@ -128,7 +128,7 @@ if st.button('Predict'):
             progress_bar.progress(0.25)
 
             # Load cuisine type model.
-            time.sleep(3)
+            cuisine_model = load('cuisine_model.joblib')
             progress_bar.progress(0.50)
 
             # Load calories model.
@@ -136,7 +136,7 @@ if st.button('Predict'):
             progress_bar.progress(0.75)
 
             # Get predictions.
-            cuisine = 'mexican'
+            cuisine = cuisine_model.predict([ingredients_processed_cuisine])[0]
             calories = calories_model.predict([ingredients_processed_calories])[0]
             progress_bar.progress(1.0)
 
