@@ -48,7 +48,9 @@ st.markdown('''
 
     `
     3 teaspoons of sugar
+
     5 cups of water
+    
     2 tablespoons cornstarch
     `
 ''')
