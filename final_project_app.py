@@ -61,7 +61,8 @@ st.sidebar.markdown('''
 ''')
 
 st.markdown('''
-    Put a list of ingredients in the box below and we'll get to work! A sample input should look something like the following:
+    Put a list of ingredients in the box below, click the "Predict" button, and 
+    we'll get to work! A sample input should look something like the following:
 
     ```
     3 teaspoons of sugar
