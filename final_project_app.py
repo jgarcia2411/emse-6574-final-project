@@ -134,6 +134,15 @@ if st.button('Predict'):
             )
             progress_bar.progress(0.25)
 
+            st.markdown(f'''
+                Here's what your text looks like after being processed for each model:
+                **CUISINE MODEL**
+                {ingredients_processed_cuisine}
+
+                **CALORIES MODEL**
+                {ingredients_processed_calories}
+            ''')
+
             # Load cuisine type model.
             cuisine_model = load('cuisine_model.joblib')
             progress_bar.progress(0.50)
