@@ -206,7 +206,7 @@ if st.button('Predict'):
         cuisine_label = 'Southern US'
 
     st.markdown(f'''
-        Hm...we predict these ingredients to have **{round(calories, 2)}** calories and to be
+        Hm...we predict these recipe ingredients to have **{round(calories, 2)}** calories and to be
         **{cuisine_label}** cuisine. Yum!
     ''')
 
