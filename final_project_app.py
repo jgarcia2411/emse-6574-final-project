@@ -36,11 +36,11 @@ st.sidebar.markdown('''
     ---
 
     Created by:
-    Kamran Arshad
-    Wisdom Ebirim
-    José Garcia
-    Kahang Ngau
-    Michael Salceda
+    * Kamran Arshad
+    * Wisdom Ebirim
+    * José Garcia
+    * Kahang Ngau
+    * Michael Salceda
 ''')
 
 st.markdown('''
