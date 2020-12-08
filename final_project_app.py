@@ -34,6 +34,13 @@ st.sidebar.markdown('''
     model.
 
     ---
+
+    Created by:
+    Kamran Arshad
+    Wisdom Ebirim
+    José Garcia
+    Kahang Ngau
+    Michael Salceda
 ''')
 
 st.markdown('''
