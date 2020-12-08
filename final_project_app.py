@@ -294,7 +294,7 @@ if st.button('Predict'):
                 )   
             )
     except Exception as e:
-        st.markdown('''
+        st.markdown(f'''
             There was an unexpected error running the model. Please raise an 
             issue [here](https://github.com/msalceda/emse-6574-final-project/issues)
             and provide the following details:
