@@ -136,10 +136,13 @@ if st.button('Predict'):
 
             st.markdown(f'''
                 Here's what your text looks like after being processed for each model:
+
                 **CUISINE MODEL**
+
                 {ingredients_processed_cuisine}
 
                 **CALORIES MODEL**
+                
                 {ingredients_processed_calories}
             ''')
 
