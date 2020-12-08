@@ -128,33 +128,33 @@ if st.button('Predict'):
                     # Remove numbers
                     step_1_2 = re.sub('[0-9]', '', step_1_2)
 
-                # Remove units.
-                step_3 = re.sub(
-                    '(oz|ounces|ounce|pound|pounds|lb|lbs|inch|inches|kg|cup|cups|tablespoon|teaspoon|tablespoons|teaspoons)', 
-                    '', 
-                    step_1_2
-                )
+                    # Remove units.
+                    step_1_2 = re.sub(
+                        '(oz|ounces|ounce|pound|pounds|lb|lbs|inch|inches|kg|cup|cups|tablespoon|teaspoon|tablespoons|teaspoons)', 
+                        '', 
+                        step_1_2
+                    )
 
                 # Tokenize text with spaCy.
-                step_4 = spacy_model(step_3)
+                step_3 = spacy_model(step_1_2)
 
                 # Remove punctuation.
-                step_5 = _remove_punctuation(step_4, step = 'initial')
+                step_4 = _remove_punctuation(step_3, step = 'initial')
 
                 # Remove stop words.
-                step_6 = _remove_stop_words(step_5)
+                step_5 = _remove_stop_words(step_4)
 
                 # Lemmatize text.
-                step_7 = _lemmatize(step_6)
+                step_6 = _lemmatize(step_5)
 
                 # Remove punctuation again.
-                step_8 = _remove_punctuation(step_7, step = 'last')
+                step_7 = _remove_punctuation(step_6, step = 'last')
 
                 # Remove words two characters or less.
-                step_9 = _remove_short_words(step_8)
+                step_8 = _remove_short_words(step_7)
 
                 # Remake sentence with new cleaned up tokens.
-                return ' '.join(step_9)
+                return ' '.join(step_8)
 
             # Start processing.
             ingredients_processed_cuisine = preprocess_text(
@@ -172,14 +172,12 @@ if st.button('Predict'):
             st.markdown(f'''
                 Here's what your text looks like after being processed for each model:
 
-                **CUISINE TYPE MODEL**
-
+                **CUISINE TYPE MODEL**\n
                 {ingredients_processed_cuisine}
 
                 ---
 
-                **CALORIES MODEL**
-
+                **CALORIES MODEL**\n
                 {ingredients_processed_calories}
 
                 ---
