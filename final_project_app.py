@@ -1,3 +1,20 @@
+'''
+Author:        Kamran Arshad
+               Wisdom Ebirim
+               José Garcia
+               Kahang Ngau
+               Michael Salceda
+Company:       
+Updated:       12-07-2020
+-------------------------------------------------------------------------------
+SUMMARY:
+This file is the main runner for the Streamlit app that uses our cuisine and
+calories models.
+-------------------------------------------------------------------------------
+VERSION        Date            Comments
+1.0            12-07-2020      Initial release
+-------------------------------------------------------------------------------
+'''
 ############
 # Built-In #
 ############
