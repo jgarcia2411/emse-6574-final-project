@@ -44,7 +44,13 @@ st.sidebar.markdown('''
 ''')
 
 st.markdown('''
-    Put a list of ingredients in the box below and we'll get to work...
+    Put a list of ingredients in the box below and we'll get to work! A sample input should look something like the following:
+
+    `
+    3 teaspoons of sugar
+    5 cups of water
+    2 tablespoons cornstarch
+    `
 ''')
 ingredients = st.text_area('Ingredients')
 
