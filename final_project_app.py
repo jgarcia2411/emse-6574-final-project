@@ -141,9 +141,13 @@ if st.button('Predict'):
 
                 {ingredients_processed_cuisine}
 
+                ---
+
                 **CALORIES MODEL**
-                
+
                 {ingredients_processed_calories}
+
+                ---
             ''')
 
             # Load cuisine type model.
