@@ -87,7 +87,18 @@ if st.button('Predict'):
                 return [token.lemma_ for token in text]
 
             def _remove_short_words(text):
-                return [token for token in text if len(token) > 2]
+                def __check_if_number(text):
+                    try:
+                        int(text)
+
+                        return True
+                    except:
+                        return False
+
+                return [
+                    token for token in text 
+                    if len(token) > 2 or __check_if_number(token)
+                ]
 
             def preprocess_text(text, model):
                 # Lowercase text and remove extra spaces.
