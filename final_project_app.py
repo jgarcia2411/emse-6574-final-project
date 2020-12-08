@@ -80,7 +80,6 @@ if st.button('Predict'):
                 Ingredients list is empty! Please put some ingredients in.
             ''')
         else:
-            raise
             with st.spinner('Getting predictions...'):
                 progress_bar = st.progress(0)
 
