@@ -5,14 +5,14 @@ Author:        Kamran Arshad
                Kahang Ngau
                Michael Salceda
 Company:       
-Updated:       12-07-2020
+Updated:       12-12-2020
 -------------------------------------------------------------------------------
 SUMMARY:
 This file is the main runner for the Streamlit app that uses our cuisine and
 calories models.
 -------------------------------------------------------------------------------
 VERSION        Date            Comments
-1.0            12-07-2020      Initial release
+1.0            12-12-2020      Initial release
 -------------------------------------------------------------------------------
 '''
 ############
@@ -42,7 +42,10 @@ st.sidebar.markdown('''
     AND learn something about your food!
 
     ## Cuisine Type Model
-    <INSERT DESCRIPTION HERE>
+    The cuisine-type model takes in a list of ingredients, preprocesses the list 
+    using the Python `spacy` library, and passing it into a `scikit-learn` pipeline 
+    consisting of a term-frequency vectorizer and a support-vector classifier (SVC) 
+    model.
 
     ## Calories Model
     The way the calories model works is by taking the ingredients, preprocessing
