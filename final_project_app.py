@@ -43,7 +43,7 @@ st.sidebar.markdown('''
 
     ## Cuisine Type Model
     The cuisine-type model takes in a list of ingredients, preprocesses the list 
-    using the Python `spacy` library, and passing it into a `scikit-learn` pipeline 
+    using the Python `spacy` library, and passes it into a `scikit-learn` pipeline 
     consisting of a term-frequency vectorizer and a support-vector classifier (SVC) 
     model.
 
